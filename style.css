@@ -10,3 +10,14 @@
 #interaction-reminder{position:absolute;left:50%;bottom:75px;transform:translateX(-50%);display:flex;align-items:center;gap:10px;border:1px solid #d7b18c66;background:#17251bec;color:#ecd3b9;padding:9px 16px;border-radius:30px;pointer-events:none;z-index:6;box-shadow:0 3px 18px #0002;font-size:11px;white-space:nowrap}#interaction-reminder.visible{animation:interaction-cue 1s ease both}@keyframes interaction-cue{0%{opacity:0;translate:0 5px}15%,75%{opacity:1;translate:0 0}100%{opacity:0;translate:0 -3px}}@media(prefers-reduced-motion:reduce){#interaction-reminder.visible{animation:interaction-cue-static 1s ease both}@keyframes interaction-cue-static{0%,100%{opacity:0}15%,75%{opacity:1}}}
 
 #context-view{width:100%;display:flex;align-items:center;justify-content:space-between;padding:10px 12px;margin-top:12px;background:#ffffff08;border:1px solid #ffffff25;border-radius:5px;color:inherit;font:inherit;font-size:12px;cursor:pointer}#context-view:hover{background:#ffffff14}#context-view:focus-visible{outline:2px solid #b8cbb8;outline-offset:3px}.context-section .hint{margin-bottom:0}
+
+.camera-cell { display: flex; flex-direction: column; min-width: 0; gap: 4px; }
+.camera-cell > button:first-child { min-height: 38px; }
+.camera-list .render-button { justify-content: center; padding: 6px 4px; font-size: 10px; color: #ecd3b9; }
+#render-dialog { width: min(1200px, calc(100% - 24px)); max-width: none; max-height: calc(100dvh - 24px); padding: 0; border: 1px solid #ffffff30; border-radius: 8px; background: #202a26; color: #f3eee6; }
+#render-dialog::backdrop { background: #101711d9; }
+.render-header { display: flex; gap: 12px; align-items: center; justify-content: space-between; padding: 10px 14px; }
+.render-header h2 { margin: 0; }
+.render-header button { white-space: nowrap; }
+.render-body { display: grid; place-items: center; padding: 0 12px 12px; background: #202a26; }
+#render-image { display: block; width: 100%; max-height: calc(100dvh - 100px); object-fit: contain; }
